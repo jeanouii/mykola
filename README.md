@@ -6,9 +6,11 @@ https://github.com/toddmotto/angular-styleguide#es2015-and-tooling
 
 npm publish testing
 
-How to use server 
+#DEMO
+
+How to use server
 ```sh
-npm i webpack typings typescript -g
+npm i webpack typings typescript webpack-dev-server -g
 npm i
 npm start
 ```
@@ -21,3 +23,22 @@ https://github.com/Dexmaster/angular-component-tr
 
 Use example:
 https://github.com/Dexmaster/mykola/commit/a933807a49c1d78dcf71a390186183eb7702f801
+
+#DOCS
+
+How to use docs:
+```sh
+npm i webpack typings typescript webpack-dev-server -g
+npm i
+gulp
+```
+
+Check docs page at:
+http://localhost:8083/
+
+# Bundle (deployment)
+
+    export NODE_ENV=bundle
+    npm run bundle
+
+Then deploy ~/.m2/repository/org/tomitribe/mykola/mykola/current/mykola-current.war on any Servlet server as /mykola context.

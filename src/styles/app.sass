@@ -1,20 +1,73 @@
 body
   font-size: 11px
   font-family: Montserrat, sans-serif
-  font-weight: bold
-  text-transform: uppercase
+  font-weight: normal
+  background: #e8ebf1
 .alegreya
   font-family: 'Alegreya Sans', sans-serif
 .btn-primary.btn-l span
   font-size: 30px
 .btn-primary.btn-m span.rt
   font-size: 13px
-.column
-  display: inline-block
-  height: 300px
-  width: 300px
-.pull-right
+.column.pull-right
   float: right
-.bimg
-  background-repeat: no-repeat
-  background-position: center center
+
+.items-list
+  list-style: none
+  font-size: 13px
+  padding: 0
+  .item
+    cursor: pointer
+    height: 37px
+    padding: 8px
+    border: 1px solid #ccc
+    margin: -1px 0
+    &.selected
+      background-color: rgba(255,0,255,0.05)
+
+.fab
+  .bimg
+    background-repeat: no-repeat
+    background-position: right center
+    background-size: 19px 4px
+    background-image: url(../images/ellipsis-icon.svg)
+    &.trigger
+      right: 8px
+      box-sizing: border-box
+.dropdown .dropdown-list .item
+  font-size: 11px
+  font-family: Lato, sans-serif
+  font-weight: 400
+  text-transform: none
+.clear
+  clear: both
+.panel
+  min-height: 300px
+  > div
+    padding-left: 30px
+
+.tribe-bulkbar
+  margin-left: 250px
+  width: auto
+  right: 0
+
+.sidebar
+  overflow-y: hidden !important
+.col-sm-12
+  padding-left: 0 !important
+
+pre
+  .string
+    color: green
+  .number
+    color: darkorange
+  .boolean
+    color: blue
+  .null
+    color: magenta
+  .key
+    color: red
+
+.item-placeholder
+  content: " "
+  height: 37px

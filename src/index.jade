@@ -2,11 +2,48 @@ doctype html
 html
   head
     meta(http-equiv="Content-type" content="text/html; charset=utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
     link(href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet")
     link(href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet")
     title Test title
     base(href="/")
-  body
-    .container-fluid
-      div(ng-app='demo-app')
-        <div ng-view></div>
+  body(ng-app="demo-app")
+    div(id="page-wrapper").open
+      div(id="sidebar-wrapper")
+        ul.sidebar
+          li.sidebar-main
+            a Tomitribe
+            //span.menu-icon.fa.fa-bars
+          li.sidebar-list
+            a(href="{{baseFullPath}}")
+              | Home
+              span.menu-icon.fa.fa-home
+          li.sidebar-title COMPONENTS
+          li.sidebar-list
+            a(href="{{baseFullPath}}plus")
+              | Plus
+              span.menu-icon.fa.fa-plus
+          li.sidebar-list
+            a(href="{{baseFullPath}}bulk-edit")
+              | Bulk Edit
+              span.menu-icon.fa.fa-clone
+          li.sidebar-list
+            a(href="{{baseFullPath}}dropdown")
+              | Dropdown
+              span.menu-icon.fa.fa-caret-square-o-down
+          li.sidebar-list
+            a(href="{{baseFullPath}}tags")
+              | Tags
+              span.menu-icon.fa.fa-tags
+          li.sidebar-list
+            a(href="{{baseFullPath}}sortable")
+              | Sortable
+              span.menu-icon.fa.fa-bars
+          div.sidebar-footer
+            div.col-xs-12
+              a Tomitribe Components
+
+      div(id="content-wrapper", ng-cloak)
+          div.page-content(ng-view)
+          div.clear

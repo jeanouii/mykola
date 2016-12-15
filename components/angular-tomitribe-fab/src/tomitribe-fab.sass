@@ -21,20 +21,26 @@
         opacity: 1
 
       &.fab-actions-up .btn
-        @include transform(scale(1) translateY(-($base-spacing-unit * 1.5)))
+        @include transform(scale(1) translateY(0))
 
-      &.fab-actions-right .btn
-        @include transform(scale(1) translateX($base-spacing-unit * 1.5))
+      &.fab-actions-right
+        background-color: rgba(255,255,255,0.2)
+        box-shadow: 0 0 2px rgba(255,255,255,0.2)
+        .btn
+          @include transform(scale(1) translateY(0))
 
       &.fab-actions-down .btn
-        @include transform(scale(1) translateY($base-spacing-unit * 1.5))
+        @include transform(scale(1) translateY(0))
 
-      &.fab-actions-left .btn
-        @include transform(scale(1) translateX(-($base-spacing-unit * 1.5)))
+      &.fab-actions-left
+        background-color: rgba(255,255,255,0.2)
+        box-shadow: 0 0 2px rgba(255,255,255,0.2)
+        .btn
+          @include transform(scale(1) translateY(0))
 
   // FAB primary button
   .fab-primary
-    .rt, .fa
+    .rt, .fa, .trigger
       @include position(absolute, 0 0 0 0)
       @include transition-property(opacity, transform)
       @include transition-duration(0.4s)
@@ -48,10 +54,11 @@
   .fab-actions
     pointer-events: none
 
+
     .btn
       display: block
       opacity: 0
-      @include transform(scale(0.6))
+      @include transform(scale(0.6) translateY(-($base-spacing-unit * 1.5)))
       @include transition-property(opacity, transform)
       @include transition-duration(0.4s)
       @include transition-timing-function($ease-out-quint)
@@ -126,13 +133,10 @@
 
   .fab-actions-left
     @include position(0 0 null null)
-
     .btn
-      margin-right: $base-spacing-unit
+      margin-right: $base-spacing-unit * 0.5
 
   .fab-actions-right
     @include position(0 null null 0)
-
     .btn
-      margin-left: $base-spacing-unit
-
+      margin-left: $base-spacing-unit * 0.5

@@ -1,0 +1,104 @@
+$green: #34bc77
+$white: #FFFFFF
+$grey: #697283
+$light-grey: #a0a8b7
+
+.tribe-bulkbar
+  width: 100%
+  background: #fafafa
+  position: fixed
+  box-sizing: border-box
+  bottom: -65px
+  left: 0
+  height: 60px
+  padding: 15px 0
+  -webkit-transition: all .3s ease
+  transition: all .3s ease
+  box-shadow: 0 -1px 5px rgba(76, 86, 103, 0.2)
+  z-index: 1
+  &.opened
+    bottom: 0
+    .inner-wrap
+      opacity: 1
+  .inner-wrap
+    opacity: 0
+    width: 100%
+    text-align: left
+    line-height: 30px
+    .bulk-check
+      cursor: pointer
+      text-align: center
+      z-index: 1
+      margin-left: 25px
+      display: block
+      float: left
+      height: 30px
+      box-sizing: border-box
+      padding: 7px 0
+      &.all-checked
+        .fa
+          border-color: $green
+          background: $green
+          color: $white
+      .fa, .text
+        color: $grey
+        vertical-align: top
+        line-height: 19px
+      .fa
+        border: 1px solid $light-grey
+        border-radius: 50%
+        height: 16px
+        width: 16px
+        line-height: 14px
+        font-size: 9px
+        color: $light-grey
+        margin-right: 7px
+
+    .selected-items
+      font-size: 12px
+      color: $grey
+      float: left
+      margin-left: 21px
+      line-height: 30px
+      strong
+        font-size: 11px
+        border-radius: 100px
+        background: $green
+        color: $white
+        padding: 1px 10px 2px
+        margin: 1px 6px 0 0
+
+    .bulk-options
+      margin: 0
+      position: absolute
+      left: 0
+      right: 0
+      text-align: center
+      z-index: -1
+      .list-item
+        display: inline-block
+        margin: 0 15px
+        list-style: none
+        .fa, .fa-2x
+          color: $grey
+          line-height: 30px
+          font-size: 1.2em
+
+    .instructions
+      float: right
+      margin-right: 35px
+      color: $light-grey
+      font-size: 11px
+      font-style: italic
+      line-height: 30px
+    strong, span
+      height: 100%
+      margin-left: 2px
+      vertical-align: middle
+
+
+  &.wrap
+    float: left
+    clear: both
+    .click
+      cursor: pointer
